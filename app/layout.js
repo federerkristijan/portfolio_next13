@@ -1,4 +1,8 @@
+import { use } from 'react';
+
+
 import './globals.css'
+import Navbar from './shared/Navbar'
 
 // head
 export const metadata = {
@@ -9,7 +13,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head metadata={metadata}/>
+      <body>
+        <header>
+          <Navbar/>
+        </header>
+        <main>{children}</main>
+        <footer></footer>
+      </body>
     </html>
   )
 }

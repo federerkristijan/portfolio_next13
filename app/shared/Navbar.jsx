@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -12,7 +14,7 @@ const Navbar = () => {
         className="flex items-center"
       >
         <Link href={'/'} className="text-lg font-medium mytext dropshadow-lg mr-5">
-          About
+          Home
         </Link>
       </motion.div>
     </nav>
