@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-tr from-slate-800 to-slate-900 font-light text-white scrollbar-none;
+  }
+  nav {
+    @apply shadow-xl flex items-center justify-between bg-slate-900 text-white h-20 px-5 font-extralight sticky top-0 z-40;
+  }
+  footer {
+    @apply bg-slate-900 text-white h-20 p-5 font-extralight sticky bottom-0 flex items-center justify-center z-10 shadow-xl;
+  }
+}
