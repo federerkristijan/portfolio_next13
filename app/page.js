@@ -1,12 +1,9 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className='text-slate-500'>
+    <div className='text-slate-500 myh overflow-y-scroll overflow-x-hidden z-0 snap-mandatory snap-y scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-purple-500'>
       Home
-    </main>
+    </div>
   )
 }
