@@ -1,3 +1,3 @@
-import socials from "./socials";
+import social from "./social";
 
-export const schemaTypes = [socials]
+export const schemaTypes = [social]
