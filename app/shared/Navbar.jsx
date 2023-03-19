@@ -3,8 +3,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { SocialIcon } from "react-social-icons";
 
-const Navbar = () => {
+const Navbar = ({ socials }) => {
   return (
     <nav>
       <motion.div
@@ -16,6 +17,15 @@ const Navbar = () => {
         <Link href={'/'} className="text-lg font-medium mytext dropshadow-lg mr-5">
           Home
         </Link>
+        {socials.map((social, index) => (
+          <SocialIcon
+            key={index}
+            url={social.url}
+            fgColor="white"
+            bgColor="transparent"
+            className="headerIcon"
+          />
+        ))}
       </motion.div>
     </nav>
   );
