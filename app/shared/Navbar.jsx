@@ -1,11 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useState} from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = ({ socials }) => {
+  const [showSidebar, setShowSidebar] = useState(false);
+
   return (
     <nav>
       <motion.div
