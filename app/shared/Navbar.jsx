@@ -1,10 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useState} from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { SocialIcon } from "react-social-icons";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
-const Navbar = () => {
+const Navbar = ({ socials }) => {
+  const [showSidebar, setShowSidebar] = useState(false);
+
   return (
     <nav>
       <motion.div
@@ -16,6 +20,15 @@ const Navbar = () => {
         <Link href={'/'} className="text-lg font-medium mytext dropshadow-lg mr-5">
           Home
         </Link>
+        {socials.map((social, index) => (
+          <SocialIcon
+            key={index}
+            url={social.url}
+            fgColor="white"
+            bgColor="transparent"
+            className="headerIcon"
+          />
+        ))}
       </motion.div>
     </nav>
   );
