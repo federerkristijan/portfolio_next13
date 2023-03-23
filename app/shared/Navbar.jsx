@@ -30,6 +30,24 @@ const Navbar = ({ socials }) => {
           />
         ))}
       </motion.div>
+      <motion.div
+        initial={{ x: 500, opacity: 0, scale: 0.5 }}
+        animate={{ x: 0, opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2 }}
+        className="flex items-center text-white cursor-pointer space-x-5"
+      >
+        <a href="#contact" className="block">
+          <SocialIcon
+            network="email"
+            fgColor="white"
+            bgColor="transparent"
+            className="headerIcon"
+          />
+        </a>
+        <div onClick={() => setShowSidebar(true)} className="flex">
+          <AiOutlineMenu className="headerIcon" />
+        </div>
+      </motion.div>
     </nav>
   );
 };
