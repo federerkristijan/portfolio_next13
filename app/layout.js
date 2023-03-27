@@ -5,6 +5,7 @@ import { use } from 'react';
 import './globals.css'
 import Navbar from './shared/Navbar'
 import { fetchSocials } from '@/utils/fetchSocials';
+import Footer from './shared/Footer';
 
 async function getSocials() {
   const socials = await fetchSocials();
@@ -29,7 +30,9 @@ export default function RootLayout({ children }) {
           <Navbar socials={socials} />
         </header>
         <main>{children}</main>
-        <footer></footer>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   )
